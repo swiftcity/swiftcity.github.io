@@ -42,3 +42,8 @@
 .justify-text {
     text-align: justify !important;
 }
+
+.faq-style {
+    width: 80%;
+    margin-top: 30px !important;
+}
