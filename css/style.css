@@ -1,9 +1,16 @@
 .img-container {
     display: inline-block;
+    border: solid rgba(0, 0, 0, .2);
+    border-width: 1px;
+    border-radius: 1px;
+}
+
+.icon-align {
+    vertical-align: middle; padding-bottom: 3px
 }
 
 .img-slider {
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 50px;
 }
 
@@ -30,4 +37,8 @@
 
 .mouse-hover {
     cursor: pointer;
+}
+
+.justify-text {
+    text-align: justify !important;
 }
