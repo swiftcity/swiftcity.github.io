@@ -150,6 +150,11 @@
             <div class="row">
                 <div class="row faq-style">
                     <div class="divider"></div>
+                    <h4 class="light">GitHub</h4>
+                    <h6 class="light justify-text">Look forward our organization on <a href="https://github.com/swiftcity" target="_blank">GitHub!</a></h6>
+                </div>
+                <div class="row faq-style">
+                    <div class="divider"></div>
                     <h4 class="light">How does the Extractor work?</h4>
                     <h6 class="light justify-text">We use two tools to collect and generate the data that will be visualized. The first is a custom Xcode toolchain that exports an AST representation of the project to an output file, by using the -dump-ast command of Swift's compiler. We then use another tool to parse the AST representation and allow its visualization. </h6>
                 </div>
@@ -158,11 +163,85 @@
                     <h4 class="light">Metaphor applied to Swift</h4>
                     <h6 class="light justify-text">This project proposes its own way to translate Swift systems into the city metaphor, which allows the understanding of the usage of the language particularities. </h6>
                     <h6 class="light justify-text">Check out <a target="_blank" href="./poster - abstract - swiftcity.pdf">here</a> an extended abstract that explains in details the project and its challenges.</h6>
+                    <br>
+                    <h5 class="light center">The buildings in the city</h5>
+                    <div class="valign-wrapper row">
+                        <div class="no-padding-margin col s12 m2 l2 left-align">
+                            <img class="img-container materialboxed" data-caption="Block dimensions." src="./imgs/blocksize.png" alt="Block dimensions.">
+                        </div>
+                        <div class="col s12 m10 l10 valign no-padding-margin">
+                            <p style="padding-left: 55px !important" class="light justify-text">A block is the fundamental element of the metaphor, representing a city building. In the original metaphor, a block was mapped to represent a class of the system. However, Swift has several elements that must be represented that were not available in Java or Javascript (e.g., structs and extensions). In a Swift context a block can represent one of these types: <strong><big>Classes, Structs, Protocols, Enumerations or Extensions</big></strong>. Several metrics can be applied in order to define the measurements of a block. For this work, the block height is given the number of <strong><big>lines of code</big></strong> (LOC) of the element, while the width and length are defined by the <strong><big>number of methods</big></strong> (NOM).</p>
+                        </div>
+                    </div>
+                    <h5 class="light center">The colors of the objects</h5>
+                    <div class="valign-wrapper row">
+                        <div class="col s12 m8 l8 valign no-padding-margin">
+                            <p class="light justify-text" style="padding-right: 15px !important">We decided to differentiate the types of elements by using <strong><big>different colors</big></strong> for each kind since, according to <a href="http://www.sciencedirect.com/science/article/pii/S0010945207001177" target="_blank">Zanolie</a>, forms are usually associated with the representation of elements of different nature, yet all elements are Swift types that belong to different categories. Moreover, the use of different forms would go against the metaphor, translating the elements into objects that do not necessarily create the immersion of a city.</p>
+                        </div>
+                        <div class="no-padding-margin col s12 m4 l4 right-align">
+                            <img class="img-container materialboxed" data-caption="Color pallet." src="./imgs/pallet.png" alt="Color pallet to types.">
+                        </div>
+                    </div>
+                    <h5 class="light center">The city Topology</h5>
+                    <div class="valign-wrapper row">
+                        <div class="no-padding-margin col s12 m3 l3 left-align">
+                            <img class="img-container materialboxed" data-caption="City of the Animated Tab project." height="250px" width="300px" src="./imgs/animated-tab-bar.png" alt="City of the Animated Tab project.">
+                        </div>
+                        <div class="col s12 m9 l9 valign no-padding-margin">
+                            <p style="padding-left: 55px !important" class="light justify-text">The city topology is usually mapped to elements of the system hierarchy. Since there are no packages, namespaces or anything equivalent in Swift, the mapping limits itself to two clear levels: <strong><big>the project and the files</big></strong>. The lowest layer represents the city limits as being the whole project (dark gray), and each element of the second layer represents a district, which translates to a file within the project (light gray).</p>
+                        </div>
+                    </div>
+                    <h5 class="light center">Handling extensions</h5>
+                    <div class="valign-wrapper row">
+                        <div class="col s12 m6 l6 valign no-padding-margin">
+                            <p class="light justify-text" style="padding-right: 15px !important">A challenge was how to represent the relations between extensions and other elements. Two approaches were considered satisfactory:
+                                <br>
+                                <ul>
+                                    <li class="light justify-text">a) <strong><big>Stacking extensions</big></strong> to the element, so they would become a single building.</li>
+                                    <li class="light justify-text">b) <strong><big>Adding another layer</big></strong> that would contain the element and its extensions.</li>
+                                </ul>
+                            </p>
+                            <p class="light justify-text valign no-padding-margin" style="padding-right: 15px !important">
+                                There are, however, advantages and disadvantages of each. The first, for example, better translates the complexity of the elements. On the other hand, the second allows a cleaner view as the city elements are more spread.
+                            </p>
+                        </div>
+                        <div class="no-padding-margin col s12 m6 l6 center">
+                            <img height="270px" width="290px" style="float: left;" class="img-container materialboxed" data-caption="Stacking up blocks method.." src="./imgs/stacking.png" alt="Stacking up blocks method.">
+                            <img height="270px" width="264px" style="margin-left: 10px !important ; float: left;" class="img-container materialboxed" data-caption="Groupping by floor method." src="./imgs/groupping.png" alt="Groupping by floor method.">
+                        </div>
+                    </div>
                 </div>
                 <div class="row faq-style">
                     <div class="divider"></div>
-                    <h4 class="light">GitHub</h4>
-                    <h6 class="light justify-text">Look forward our organization on <a href="https://github.com/swiftcity" target="_blank">GitHub!</a></h6>
+                    <h4 class="light">Simple analysis</h4>
+                    <h6 class="light justify-text">Using our Visualizer you can quickly make analysis and conclusions about the project just spending a few minutes looking at the city. Look some analysis made bellow:</h6>
+                    <div class="valign-wrapper row">
+                        <div class="no-padding-margin col s12 m12 l9 center">
+                            <img width="100%" height="490px" class="img-container materialboxed" data-caption="Simple analysis made on project using the visualizer." src="./imgs/alamofire-analysis.png" alt="Simple analysis made on project using the visualizer.">
+                        </div>
+                        <div class="no-padding-margin col s12 m12 l3">
+                            <p class="light justify-text" style="padding-left: 15px !important"><strong>Alamofire</strong>: API for HTTP networking.</p>
+                            <ul class="browser-default" style="padding-left: 30px !important">
+                                <li class="light justify-text">Extensions as a pattern, but there are some huge classes in the city.</li>
+                                <li class="light justify-text">Two strangely large blue towers (enums). This is unusual for enums. Therefore, they could be subject to inspection.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="valign-wrapper row">
+                        <div class="no-padding-margin col s12 m12 l9 center">
+                            <img width="100%" height="490px" class="img-container materialboxed" data-caption="Simple analysis made on project using the visualizer." src="./imgs/rxswift-analysis.png" alt="Simple analysis made on project using the visualizer.">
+                        </div>
+                        <div class="no-padding-margin col s12 m12 l3">
+                            <p class="light justify-text" style="padding-left: 15px !important"><strong>RxSwift</strong>: reactive programming framework.</p>
+                            <ul class="browser-default" style="padding-left: 30px !important">
+                                <li class="light justify-text">Few extensions that extend classes;</li>
+                                <li class="light justify-text">More extensions to native Swift types, shown as ungrouped yellow blocks in the city;</li>
+                                <li class="light justify-text">53 extensions to a protocol (ObservableType);</li>
+                                <li class="light justify-text">Structs are not as often used as in Alamofire.</li>
+                            </ul>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
